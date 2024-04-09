@@ -1,0 +1,33 @@
+.gallery__news {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.new {
+  width: 410px;
+  height: auto;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.new > img {
+  width: 400px;
+  height: 300px;
+}
+.new > h3 {
+  width: 400px;
+  margin: 0 0 20px 0;
+}
+
+.new > p {
+  width: 400px;
+  color: #cdc6c3;
+}
+
+.date__new {
+  opacity: 0.5;
+}

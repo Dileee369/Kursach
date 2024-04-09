@@ -1,0 +1,36 @@
+.title__company-left {
+width: 50%;
+}
+
+.title__company-right {
+width: 35%;
+}
+
+.title__company {
+display: flex;
+justify-content: space-between;
+}
+
+.container__mini {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.title__company-left > h2 {
+  margin: 0 0 30px 0;
+}
+
+.title__company-left > p {
+color: #cdc6c3;
+}
+
+.section__company {
+  margin-bottom: 80px;
+}
+
+.company__top {
+text-align: center;
+margin: 20px 20px 70px 20px;
+font-size: 30px;
+}
