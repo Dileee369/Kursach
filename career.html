@@ -1,110 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Document</title>
+    <title>Document</title>
 
-  <script src="libs/gsap/gsap.min.js" defer></script>
-  <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
-  <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/company.css">
-  <link rel="stylesheet" href="css/production-directions.css">
-  <link rel="stylesheet" href="css/news.css">
-  <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/company.css">
+    <link rel="stylesheet" href="css/production-directions.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="stylesheet" href="css/career.css">
+    <script src="js/app.js" defer></script>
 
 </head>
 <body>
 
-  <div class="wrapper">
-   <div class="content">
+<div class="wrapper">
+    <div class="content">
 
-    <header>
-      <ul>
+        <header>
+            <ul>
 
-        <li><a href="./index.html">Главная</a></li>
-        <li><a href="./company.html">ЭкоНива-Техника</a></li>
-        <li><a href="./production directions.html">Направления производства</a></li>
-        <li><a href="./news.html">Новости</a></li>
-        <li><a href="./career.html">Карьера</a></li>
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./company.html">ЭкоНива-Техника</a></li>
+                <li><a href="./production directions.html">Направления производства</a></li>
+                <li><a href="./news.html">Новости</a></li>
+                <li><a href="./career.html">Карьера</a></li>
 
-      </ul>
-    </header>
-      
-    <section class="company__top">
-      <h1>Заявка на трудоустройство/практику</h1>
-    </section>
-    
-    <section class="container__mini">
-      <form>
-        <div class="field__input">
-          <label class="label__items" for="Fullname">Имя</label> <input class="input__items" id="Fullname" required type="text"> 
-        </div>
-        <div class="field__input">
-          <label class="label__items" for="Fullname">Фамилия</label> <input class="input__items" id="Fullname" required type="text"> 
-        </div>
-        <div class="field__input">
-          <label class="label__items" for="Fullname">Дата рождения</label> <input class="input__items" id="Fullname" required type="text"> 
-        </div>
-        <div class="field__input">
-          <label class="label__items" for="Fullname">Контактная информация</label> <textarea id="Fullname" required type="text"> </textarea>
-        </div>
-        <div class="field__input">
-          <label class="label__items" for="Fullname">Желаемая позиция</label> <input class="input__items" id="Fullname" required type="text"> 
-        </div>
-        <div class="field__input">
-          <label class="label__items" for="Fullname">Желаемая оплата</label> <input class="input__items" id="Fullname" required type="text"> 
-        </div>
-        <div class="field__input">
-          <label class="label__items" for="Fullname">Опыт работы</label> <input class="input__items" id="Fullname" required type="text"> 
-        </div>
-        <div class="field__input">
-          <label class="label__items" for="Fullname">Ваш email</label> <input class="input__items" id="Fullname" required type="text"> 
-        </div>
-      </form>
-    </section>
+            </ul>
+        </header>
 
-  <footer>
+        <section class="company__top">
+            <h1>Заявка на трудоустройство/практику</h1>
+        </section>
 
-    <div class="footer__left">
-      <h3>
-        Контакты
-      </h3>
-      <a href="mailto:info@ekoniva.com">
-        info@ekoniva.com
-      </a>
+        <section class="page container__mini">
+            <div id="system-message-container">
+            </div>
+            <div id="fox-container-c401" class="fox-container fox-container-component">
+                <form name="fox-form-c401" method="post" enctype="multipart/form-data"
+                      novalidate="" class="fox-form fox-form-stacked fox-form-label-beside">
+                    <div id="fox-c401-message-box"
+                         style="display: none !important; position: absolute; left: -9000px; top: -9000px;"><span
+                            class="control-label collapsed"></span>
+                        <div class="controls"><textarea id="fox-c401-message" name="fox_form[c401][message]"></textarea><input
+                                type="hidden" id="fox-c401-action" name="fox_form[c401][action]" value="0"
+                                class="action"></div>
+                    </div>
+                    <div class="fox-row">
+                        <div class="fox-column fox-column12">
+                            <div id="fox-c401-board-box"
+                                 class="fox-item fox-item-board fox-item-board-labels control-group"></div>
+                            <div class="fox-item fox-item-html fox-item-html-labels control-group"><p>Обращаем ваше
+                                внимание: все поля этой формы обязательны для заполнения.</p></div>
+                            <div id="fox-c401-name-box" class="fox-item fox-item-name control-group">
+                                <div class="control-label"><label for="fox-c401-name">Имя<span class="required"></span></label>
+                                </div>
+                                <div class="controls"><input id="fox-c401-name" name="fox_form[c401][name]" type="text"
+                                                             value="" placeholder=""></div>
+                            </div>
+                            <div id="fox-c401-textfield2-box" class="fox-item fox-item-text-field control-group">
+                                <div class="control-label"><label for="fox-c401-textfield2">Фамилия<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><input id="fox-c401-textfield2" name="fox_form[c401][textfield2]"
+                                                             type="text" value="" placeholder=""></div>
+                            </div>
+                            <div id="fox-c401-textfield3-box" class="fox-item fox-item-text-field control-group">
+                                <div class="control-label"><label for="fox-c401-textfield3">Место проживания<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><input id="fox-c401-textfield3" name="fox_form[c401][textfield3]"
+                                                             type="text" value="" placeholder=""></div>
+                            </div>
+                            <div id="fox-c401-calendar1-box" class="fox-item fox-item-calendar control-group">
+                                <div class="control-label"><label for="fox-c401-calendar1">Дата рождения<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><input id="fox-c401-calendar1" name="fox_form[c401][calendar1]"
+                                                             type="text" value="" placeholder="" readonly=""
+                                                             data-format="d.m.Y"
+                                                             data-options="{&quot;theme&quot;:&quot;default&quot;,&quot;datepicker&quot;:true,&quot;timepicker&quot;:false,&quot;closeOnDateSelect&quot;:true,&quot;step&quot;:60}"
+                                                             class="fox-item-calendar-input"></div>
+                            </div>
+                            <div id="fox-c401-email-box" class="fox-item fox-item-email control-group">
+                                <div class="control-label"><label for="fox-c401-email">Ваш email<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><input id="fox-c401-email" name="fox_form[c401][email]"
+                                                             type="email" value="" placeholder=""></div>
+                            </div>
+                            <div id="fox-c401-textarea2-box" class="fox-item fox-item-text-area control-group">
+                                <div class="control-label"><label for="fox-c401-textarea2">Контактная информация<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><textarea id="fox-c401-textarea2" name="fox_form[c401][textarea2]"
+                                                                style="height: 172.5px; overflow: hidden;"
+                                                                placeholder="Телефон, skype и др."
+                                                                data-options="{&quot;max&quot;:0}"
+                                                                class="fox-item-textarea-input elastic"></textarea>
+                                    <div style="position: absolute; display: none; overflow-wrap: break-word; white-space: pre-wrap; border-color: rgb(170, 170, 170); border-style: solid; border-width: 1px; font-weight: 400; width: 448px; font-family: Tahoma, Arial, sans-serif; line-height: normal; font-size: 14px; padding: 4px 5px;">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fox-c401-textfield1-box" class="fox-item fox-item-text-field control-group">
+                                <div class="control-label"><label for="fox-c401-textfield1">Желаемая позиция<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><input id="fox-c401-textfield1" name="fox_form[c401][textfield1]"
+                                                             type="text" value="" placeholder=""></div>
+                            </div>
+                            <div id="fox-c401-textfield4-box" class="fox-item fox-item-text-field control-group">
+                                <div class="control-label"><label for="fox-c401-textfield4">Желаемая оплата<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><input id="fox-c401-textfield4" name="fox_form[c401][textfield4]"
+                                                             type="text" value="" placeholder=""></div>
+                            </div>
+                            <div id="fox-c401-textarea1-box" class="fox-item fox-item-text-area control-group">
+                                <div class="control-label"><label for="fox-c401-textarea1">Образование<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><textarea id="fox-c401-textarea1" name="fox_form[c401][textarea1]"
+                                                                style="height: 172.5px; overflow: hidden;"
+                                                                placeholder="Учебное заведение, факультет/ специальность, годы обучения"
+                                                                data-options="{&quot;max&quot;:0}"
+                                                                class="fox-item-textarea-input elastic"></textarea>
+                                    <div style="position: absolute; display: none; overflow-wrap: break-word; white-space: pre-wrap; border-color: rgb(170, 170, 170); border-style: solid; border-width: 1px; font-weight: 400; width: 448px; font-family: Tahoma, Arial, sans-serif; line-height: normal; font-size: 14px; padding: 4px 5px;">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fox-c401-textarea3-box" class="fox-item fox-item-text-area control-group">
+                                <div class="control-label"><label for="fox-c401-textarea3">Опыт работы<span
+                                        class="required"></span></label></div>
+                                <div class="controls"><textarea id="fox-c401-textarea3" name="fox_form[c401][textarea3]"
+                                                                style="height: 172.5px; overflow: hidden;"
+                                                                placeholder="Последние 3 места работы; дата принятия и увольнения; отрасль деятельности; название должности; 3-5 основных должностных обязанностей; название места работы"
+                                                                data-options="{&quot;max&quot;:0}"
+                                                                class="fox-item-textarea-input elastic"></textarea>
+                                    <div style="position: absolute; display: none; overflow-wrap: break-word; white-space: pre-wrap; border-color: rgb(170, 170, 170); border-style: solid; border-width: 1px; font-weight: 400; width: 448px; font-family: Tahoma, Arial, sans-serif; line-height: normal; font-size: 14px; padding: 4px 5px;">
+                                        &nbsp;
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="fox-c401-attachments-box-upload-lst"
+                                 class="fox-item fox-item-attachments-upload-lst control-group">
+                                <div class="controls">
+                                    <ul id="fox-c401-upload-lst" class="qq-upload-list"></ul>
+                                </div>
+                            </div>
+                            <div id="fox-c401-checkbox1-box" class="fox-item fox-item-checkbox control-group"><span
+                                    class="control-label collapsed"></span>
+                                <div class="controls"><label for="fox-c401-checkbox1" class="checkbox"><input
+                                        id="fox-c401-checkbox1" name="fox_form[c401][checkbox1]" type="checkbox"
+                                        value="Да"><span class="required"></span>Достоверность сведений подтверждаю. Даю
+                                    согласие на обработку указанных мною персональных данных бессрочно.</label></div>
+                            </div>
+                            <div id="fox-c401-checkbox2-box" class="fox-item fox-item-checkbox control-group"><span
+                                    class="control-label collapsed"></span>
+                                <div class="controls"><label for="fox-c401-checkbox2" class="checkbox"><input
+                                        id="fox-c401-checkbox2" name="fox_form[c401][checkbox2]" type="checkbox"
+                                        value="Да"><span class="required"></span>Я предупрежден (а), что сведения,
+                                    изложенные в анкете, подлежат проверке. Проверку указанных мной сведений
+                                    разрешаю.</label></div>
+                            </div>
+                            <div id="fox-c401-submit-box"
+                                 class="fox-item fox-item-submit fox-item-submit-fields control-group"><span
+                                    class="control-label collapsed"></span>
+                                <div class="controls">
+                                    <button type="submit" class="btn btn-primary submit-button"><span class="caption">Отправить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="option" value="com_foxcontact"><input type="hidden" name="task"
+                                                                                     value="form.send"><input
+                        type="hidden" name="uid" value="c401"><input type="hidden" name="fox_form_page_uri"
+                                                                     value="https://ekoniva-apk.ru/career/jobrequest"><input
+                        type="hidden" name="fox_form_page_title"
+                        value="Заявка на трудоустройство в сельскохозяйственных предприятиях компании «ЭкоНива-АПК Холдинг»"><input
+                        type="hidden" name="search"></form>
+            </div>
+        </section>
 
-      <br>
+        <footer>
 
-      <a href="tel:+78005505700">
-        8 800 550 5700
-      </a>
+            <div class="footer__left">
+                <h3>
+                    Контакты
+                </h3>
+                <a href="mailto:info@ekoniva.com">
+                    info@ekoniva.com
+                </a>
+
+                <br>
+
+                <a href="tel:+78005505700">
+                    8 800 550 5700
+                </a>
+            </div>
+
+            <div class="footer__right">
+
+                <h3>
+                    Соц. сети
+                </h3>
+                <a class="media__icon" href="https://vk.com/zashchitnoye">
+                    <img src="./img/media/free-icon-vkontakte-4494517.png" alt="Alt">
+                </a>
+                <a class="media__icon" href="https://t.me/EkoNivaGroup">
+                    <img src="./img/media/free-icon-telegram-2504941.png" alt="Alt">
+                </a>
+                <a class="media__icon" href="https://youtube.com/c/EkoNivaCompany/videos">
+                    <img src="./img/media/free-icon-youtube-4494485.png" alt="Alt">
+                </a>
+            </div>
+
+        </footer>
+
     </div>
-
-    <div class="footer__right">
-
-      <h3>
-        Соц. сети
-      </h3>
-      <a class="media__icon" href="https://vk.com/zashchitnoye">
-        <img src="./img/media/free-icon-vkontakte-4494517.png" alt="Alt">
-      </a>
-      <a class="media__icon" href="https://t.me/EkoNivaGroup">
-        <img src="./img/media/free-icon-telegram-2504941.png" alt="Alt">
-      </a>
-      <a class="media__icon" href="https://youtube.com/c/EkoNivaCompany/videos">
-        <img src="./img/media/free-icon-youtube-4494485.png" alt="Alt">
-      </a>
-    </div>
-
-  </footer>
-
-   </div> 
-  </div>
+</div>
 
 </body>
 </html>
